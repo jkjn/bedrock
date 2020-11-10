@@ -11,8 +11,8 @@ provider "aws" {
     region = "us-east-2"
 }
 
-resource "aws_s3_bucket" "backup" {
-    name = "jkjn-bedrock-backup"
+module "s3" {
+  source = "./s3"
 }
 
 # module "iam" {
