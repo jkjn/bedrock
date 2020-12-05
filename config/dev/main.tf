@@ -12,7 +12,9 @@ provider "aws" {
 }
 
 module "s3" {
-  source = "./s3"
+  source = "../../provisioning/s3"
+  env = var.env
+  tags = var.tags
 }
 
 # module "iam" {
