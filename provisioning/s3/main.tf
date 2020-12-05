@@ -3,7 +3,6 @@ locals {
 }
 resource "aws_s3_bucket" "backup" {
     bucket = "minecraft-data-backup-${var.env}-${data.aws_caller_identity.current.id}"
-    acl = "private"
 
     versioning {
         enabled = true
